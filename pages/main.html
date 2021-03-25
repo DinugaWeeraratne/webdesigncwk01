@@ -1,35 +1,38 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Main Page</title>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../css/main.css" />
-  </head>
-  <body>
-    <div>
-      <header-tag></header-tag>
-      <script src="../scripts/reusables/Header.js"></script>
-      <script src="../scripts/routes.js"></script>
 
-      <div class="wrapper">
-        <div class="rowContainer">
-          <div class="btn">
-            <button type="button" onclick="redirectTo('query-page')">Query Page</button>
-          </div>
-          <div class="btn">
-            <button type="button" onclick="redirectTo('quiz-page')">Quiz</button>
-          </div>
+<head>
+  <title>Main Page</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="../css/main.css" />
+</head>
+
+<body>
+  <div>
+    <header-tag></header-tag>
+    <script src="../scripts/reusables/Header.js"></script>
+    <script src="../scripts/routes.js"></script>
+
+    <div class="wrapper">
+      <div class="rowContainer">
+        <div class="btn">
+          <button type="button" onclick="redirectTo('query-page')">Query Page</button>
         </div>
-        <div class="rowContainer">
-          <div class="btn">
-            <button type="button" onclick="redirectTo('student-details-page')">Student Details</button>
-          </div>
-          <div class="btn">
-            <button type="button" onclick="redirectTo('buy-products-page')">Buy Products</button>
-          </div>
+        <div class="btn">
+          <button type="button" onclick="redirectTo('quiz-page')">Quiz</button>
+        </div>
+      </div>
+      <div class="rowContainer">
+        <div class="btn">
+          <button type="button" onclick="redirectTo('studentDetails.html')">Student Details</button>
+        </div>
+        <div class="btn">
+          <button type="button" onclick="redirectTo('buy-products-page')">Buy Products</button>
         </div>
       </div>
     </div>
-  </body>
+  </div>
+</body>
+
 </html>

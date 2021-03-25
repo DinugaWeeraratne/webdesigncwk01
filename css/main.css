@@ -83,3 +83,20 @@ button:hover::after {
   opacity: 1;
   transition: 0.7s;
 }
+#center001 {
+  text - align: center;
+  color: black;
+}
+#frame001 {
+  height: 700px;
+  width: 700px;
+  background - color: white;
+  border: 3px solid black;
+  margin: 4px;
+  padding: 4px;
+  border - radius: 10px;
+  vertical - align: middle;
+  display: flex;
+  align - items: center;
+  justify - content: center;
+}
