@@ -11,6 +11,7 @@
   min-height: 100vh;
   margin: 0;
 }
+
 .container {
   background-color: white;
   border-radius: 5px;
@@ -19,24 +20,31 @@
   max-width: 100%;
   overflow: hidden;
 }
+
 .header {
   padding: 20px 40px;
 }
+
 .header h2 {
   margin: 0;
+  text-align: center;
 }
+
 .form {
   padding: 30px 40px;
 }
+
 .form-control {
   margin-bottom: 10px;
   padding-bottom: 20px;
   position: relative;
 }
+
 .form-control label {
   display: inline-block;
   margin-bottom: 5px;
 }
+
 .form-control input {
   border: solid 2px #f0f0f0;
   border-radius: 4px;
@@ -45,6 +53,7 @@
   width: 100%;
   padding: 10px;
 }
+
 .form-control textarea {
   border: solid 2px #f0f0f0;
   border-radius: 4px;
@@ -53,18 +62,21 @@
   width: 100%;
   padding: 10px;
 }
+
 .form-control i {
   position: absolute;
   top: 40px;
   right: 10px;
   visibility: hidden;
 }
+
 .form-control small {
   position: absolute;
   bottom: 0;
   left: 0;
   visibility: hidden;
 }
+
 .form button {
   background-color: #ffc107;
   padding: 10px 20px;
@@ -74,31 +86,47 @@
   display: block;
   width: 100%;
 }
+
+.form.close {
+    visibility: hidden;
+    display: none;
+}
 .form-control.success input {
   border-color: #2ecc71;
 }
+
 .form-control.success i.fa-check-circle {
   visibility: visible;
   color: #2ecc71;
+}
+
+form-control.success i.fa-check-circle.close {
+    visibility: hidden;
+    /* color: #2ecc71; */
 }
 .form-control.success small {
   visibility: visible;
   color: #2ecc71;
 }
+
 .form-control.success textarea {
   border-color: #2ecc71;
 }
+
 .form-control.error input {
   border-color: #e74c3c;
 }
+
 .form-control.error i.fa-exclamation-circle {
   visibility: visible;
   color: #e74c3c;
 }
+
 .form-control.error small {
   visibility: visible;
   color: #e74c3c;
 }
+
 .form-control.error textarea {
   border-color: #e74c3c;
 }
@@ -115,9 +143,11 @@
   background-color: white;
   max-width: 80%;
 }
+
 .modal.active {
   transform: translate(-50%, -50%) scale(1);
 }
+
 .modal-header {
   padding: 10px 15px;
   display: flex;
@@ -125,10 +155,12 @@
   align-items: center;
   border: solid 1px black;
 }
+
 .modal-header .title {
   font-size: 1.25rem;
   font-weight: bold;
 }
+
 .modal-header .close-button {
   cursor: pointer;
   border: none;
@@ -137,10 +169,12 @@
   font-size: 1.25rem;
   font-weight: bold;
 }
+
 .modal-body {
   padding: 50px 50px;
   border: solid 1px black;
 }
+
 #overlay {
   position: fixed;
   top: 0;
@@ -154,4 +188,50 @@
 
 #overlay.active {
   opacity: 1;
+}
+.summary-container{
+    visibility: visible;
+    padding: 20px;
+    position: absolute;
+    top: 240px;
+    word-wrap: break-word;
+    overflow: overlay;
+    background-color: white;
+    width: 465px;
+    word-wrap: break-word;
+    word-break: break-all;
+    border-radius: 5px;
+}
+.summary-container button{
+    width: 100%;
+    padding: 4px;
+    font-size: 16px;
+    background: #ffc107;
+    border: solid 1px #ffc107;
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
+.summary-container.close{
+    visibility: hidden;
+    padding: 20px;
+    position: absolute;
+    top: 240px;
+    word-wrap: break-word;
+    overflow: hidden;
+}
+.row-container{
+    display: flex;
+}
+.row-container>div{
+    margin: 3px;
+    font-size: 18px;
+}
+#last-child{
+    padding-bottom: 30px;
+}
+.title{
+
+}
+.close{
+    visibility: hidden;
 }
