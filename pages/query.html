@@ -1,15 +1,73 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Main Page</title>
+    <title>Query Page</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- <link rel="stylesheet" href="../css/layout.css" /> -->
+    <link rel="stylesheet" href="../css/query.css" />
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="path/to/font-awesome/css/font-awesome.min.css"
+    />
   </head>
   <body>
-      <div>
-        <header-tag></header-tag>
-        <script src="../scripts/reusables/Header.js"></script>
+    <header-tag name="jdsj"></header-tag>
+    <script src="../scripts/reusables/Header.js"></script>
+    <div class="body-container">
+      <div class="container">
+        <div class="header">
+          <h2>Create Account</h2>
+        </div>
+        <form class="form" id="form">
+          <div class="form-control">
+            <label>Username</label>
+            <input type="text" placeholder="username" id="username" />
+            <i class="fas fa-check-circle"></i>
+            <i class="fas fa-exclamation-circle"></i>
+            <small>Error Message</small>
+          </div>
+
+          <div class="form-control">
+            <label>Email</label>
+            <input
+              type="email"
+              placeholder="youremail@example.com"
+              id="email"
+            />
+            <i class="fas fa-check-circle"></i>
+            <i class="fas fa-exclamation-circle"></i>
+            <small>Error Message</small>
+          </div>
+
+          <div class="form-control">
+            <label>Password</label>
+            <input type="password" placeholder="password" id="password" />
+            <i class="fas fa-check-circle"></i>
+            <i class="fas fa-exclamation-circle"></i>
+            <small>Error Message</small>
+          </div>
+
+          <button>Submit</button>
+        </form>
+          <div class="modal" id="modal">
+            <div class="modal-header">
+              <div class="title">Error</div>
+              <button data-close-button class="close-button">&times;</button>
+            </div>
+            <div class="modal-body">
+              Please fill all the fields
+            </div>
+          </div>
+          <div id="overlay active"></div>
+          <script src="../scripts/query.js"></script>
       </div>
+      <div class="summary-container"></div>
+    </div>
   </body>
 </html>

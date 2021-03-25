@@ -17,7 +17,7 @@ template.innerHTML =`
 }
 .header{
     background-color: rgb(25, 118, 210);
-    height: 120px;
+    height: 85px;
     text-align: left;
     color: white;
 }

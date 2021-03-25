@@ -6,7 +6,7 @@ body {
 }
 body {
   /* height: 100vh; */
-  background: white;
+  background: #404040;
 }
 .wrapper{
     margin-top: 100px;
@@ -30,18 +30,18 @@ button {
 button {
   background: none;
   color: rgb(25, 118, 210);;
-  width: 240px;
+  width: 400px;
   height: 80px;
   border: 1px solid rgb(25, 118, 210);;
   font-size: 18px;
-  border-radius: 4px;
+  border-radius: 100px;
   transition: 0.6s;
   overflow: hidden;
 }
 button:focus {
   outline: none;
 }
-button:before {
+/* button:before {
   content: "";
   display: block;
   position: absolute;
@@ -53,9 +53,9 @@ button:before {
   opacity: 0.5;
   filter: blur(30px);
   transform: translateX(-130px) skewX(-15deg);
-}
+} */
 
-button:after {
+/* button:after {
   content: "";
   display: block;
   position: absolute;
@@ -67,7 +67,7 @@ button:after {
   opacity: 0;
   filter: blur(30px);
   transform: translate(-100px) scaleX(-15deg);
-}
+} */
 button:hover{
     background: rgb(25, 118, 210);;
     cursor: pointer;
