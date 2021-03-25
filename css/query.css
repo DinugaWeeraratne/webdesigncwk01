@@ -45,6 +45,14 @@
   width: 100%;
   padding: 10px;
 }
+.form-control textarea {
+  border: solid 2px #f0f0f0;
+  border-radius: 4px;
+  display: block;
+  font-size: 14px;
+  width: 100%;
+  padding: 10px;
+}
 .form-control i {
   position: absolute;
   top: 40px;
@@ -77,6 +85,9 @@
   visibility: visible;
   color: #2ecc71;
 }
+.form-control.success textarea {
+    border-color: #2ecc71;
+  }
 .form-control.error input {
   border-color: #e74c3c;
 }
@@ -88,6 +99,9 @@
   visibility: visible;
   color: #e74c3c;
 }
+.form-control.error textarea {
+    border-color: #e74c3c;
+  }
 
 .modal {
   position: fixed;
@@ -101,8 +115,8 @@
   background-color: white;
   max-width: 80%;
 }
-.modal.active{
-    transform: translate(-50%, -50%) scale(1);
+.modal.active {
+  transform: translate(-50%, -50%) scale(1);
 }
 .modal-header {
   padding: 10px 15px;
@@ -127,17 +141,17 @@
   padding: 50px 50px;
   border: solid 1px black;
 }
-#overlay{
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, o, 0, 0.5);
-    pointer-events: none;
-    transition: 200ms ease-in-out;
+#overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, o, 0, 0.5);
+  pointer-events: none;
+  transition: 200ms ease-in-out;
 }
 
-#overlay.active{
-    opacity: 1;
+#overlay.active {
+  opacity: 1;
 }
