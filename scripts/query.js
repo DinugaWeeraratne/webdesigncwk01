@@ -5,14 +5,18 @@ const queryDetails = document.getElementById("query-details");
 const openModalButtons = document.querySelectorAll("[data-modal-target]");
 const closeModalButtons = document.querySelectorAll("[data-close-button]");
 const overlay = document.getElementById("overlay");
-
+const formContainer = document.getElementById("form");
+const editButton = document.getElementById("edit")
+const summaryContainer = document.getElementById("summary-container")
+const icon = document.getElementById("success-icon")
 if (form !== null) {
   form.addEventListener("submit", (e) => {
     e.preventDefault();
     checkInputs();
+    loadSummary();
+    removeIcons();
   });
 }
-
 // Validate fields
 function checkInputs() {
   const userNameValue = username.value.trim();
@@ -23,16 +27,22 @@ function checkInputs() {
     setErrorFor(username, "Username cannot be blank");
   } else {
     setSuccessFor(username);
+    setDataToSummary(userNameValue, "name-value");
   }
   if (emailValue === "") {
     setErrorFor(email, "Email cannot be blank");
   } else {
     setSuccessFor(email);
+    setDataToSummary(emailValue, "email-value");
   }
   if (queryDetailValue === "") {
     setErrorFor(queryDetails, "Details cannot be blank");
   } else {
     setSuccessFor(queryDetails);
+    setDataToSummary(queryDetailValue, "details-value");
+  }
+  if (userNameValue !== "" && emailValue !== "" && queryDetailValue !== "") {
+    removeForm();
   }
 }
 // sets styles when error occurred while validating
@@ -78,4 +88,29 @@ function closeModal(modal) {
   if (modal === null) return;
   modal.classList.remove("active");
   overlay.classList.remove("active");
+}
+function setDataToSummary(value, id) {
+  const nameLabel = document.getElementById(id);
+  if (value !== null) {
+    nameLabel.innerHTML = value;
+  }
+}
+function removeForm() {
+  formContainer.className = "form close";
+}
+function loadForm() {
+    formContainer.className = "form"
+}
+editButton.addEventListener("click", (e) => {
+    loadForm();
+    closeSummary()
+})
+function loadSummary(){
+    summaryContainer.className = "summary-container"
+}
+function closeSummary(){
+    summaryContainer.className = "summary-container close"
+}
+function removeIcons(){
+    icon.className = "fas fa-check-circle close"
 }
