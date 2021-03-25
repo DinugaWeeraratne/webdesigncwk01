@@ -4,29 +4,36 @@ body {
   padding: 0;
   width: 100%; */
 }
+
 body {
   /* height: 100vh; */
   background: #fff7c7;
 }
+
 .wrapper {
   margin-top: 100px;
 }
+
 .rowContainer {
   display: flex;
   justify-content: center;
 }
-.rowContainer > div {
+
+.rowContainer>div {
   margin: 10px;
 }
+
 .btn {
   /* flex: 1; */
 }
+
 button {
   /* position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%); */
 }
+
 button {
   background: none;
   color: #ffc107;
@@ -38,9 +45,11 @@ button {
   transition: 0.6s;
   overflow: hidden;
 }
+
 button:focus {
   outline: none;
 }
+
 /* button:before {
   content: "";
   display: block;
@@ -73,30 +82,34 @@ button:hover {
   cursor: pointer;
   color: white;
 }
+
 button:hover:before {
   transform: translateX(300px) skew(-15deg);
   opacity: 0.6;
   transition: 0.7s;
 }
+
 button:hover::after {
   transform: translateX(300px) skew(-15deg);
   opacity: 1;
   transition: 0.7s;
 }
+
 #center001 {
-  text - align: center;
+  text-align: center;
   color: black;
 }
+
 #frame001 {
   height: 700px;
   width: 700px;
-  background - color: white;
+  background-color: white;
   border: 3px solid black;
   margin: 4px;
   padding: 4px;
-  border - radius: 10px;
-  vertical - align: middle;
+  border-radius: 10px;
+  vertical-align: middle;
   display: flex;
-  align - items: center;
-  justify - content: center;
+  align-items: center;
+  justify-content: center;
 }

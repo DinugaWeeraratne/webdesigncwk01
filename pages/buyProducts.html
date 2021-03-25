@@ -1,260 +1,344 @@
 <!DOCTYPE HTML>
 <html>
+
 <head>
-<meta charset=utf-8">
-<title>Buy Products</title>
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-<link rel="stylesheet" href="buyProducts.css">
-<link rel="stylesheet" href="../css/main.css" />
+    <meta charset=utf-8">
+    <title>Buy Products</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="buyProducts.css">
+    <link rel="stylesheet" href="../css/main.css" />
 </head>
+
 <body>
-      <header-tag></header-tag>
-      <script src="../scripts/reusables/Header.js"></script>
-      <script src="../scripts/routes.js"></script>
-<section>
-    <div class="text-center">
-        <h1>Buy Products Here</h1>
-    </div>
-    <div class="row">
-        <div class="col-md-4">
-            <div class="container-fluid">
-                <form>
-                    <div class="form-group">
-                        <div class="container">
+    <header-tag></header-tag>
+    <script src="../scripts/reusables/Header.js"></script>
+    <script src="../scripts/routes.js"></script>
+    <section>
+        <div class="text-center">
+            <h1>Buy Products Here</h1>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="container-fluid">
+                    <form>
+                        <div class="form-group">
+                            <div class="container">
                                 <label>Enter your Name</label>
-                                <input name="name" class="form-control" type="name"/>
+                                <input id="form_name" name="name" class="form-control" type="name" />
+                            </div>
                         </div>
-                    </div>
-                  
-                    <div class="form-group">
-                        <div class="container">
+
+                        <div class="form-group">
+                            <div class="container">
                                 <label>Enter your email</label>
-                                <input name="email" class="form-control" type="email"/>
+                                <input id="form_email" name="email" class="form-control" type="email" />
+                            </div>
                         </div>
-                    </div>
 
-                    <div class="form-group">
-                        <div class="container">
+                        <div class="form-group">
+                            <div class="container">
                                 <label>Enter your phone number</label>
-                                <input  name="phone" class="form-control" type="phone"/>
+                                <input id="form_phone" name="phone" class="form-control" type="phone" />
+                            </div>
                         </div>
-                    </div>
-                </form>
-            </div>
-         
-        </div>
+                    </form>
+                </div>
 
-        <div class="col-md-4">
-            <div class="text-center">
-                <div class="card">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <img src="https://img.fifa.com/image/upload/t_l4/scrllporgjpmr3uusig7.jpg" width="100%">
-                        </div>
-                        <div class="col-md-6">
+            </div>
+
+            <div class="col-md-4">
+                <div class="text-center">
+                    <div class="card">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <img src="https://img.fifa.com/image/upload/t_l4/scrllporgjpmr3uusig7.jpg" width="100%">
+                            </div>
+                            <div class="col-md-6">
                                 <h4>Messi item</h4>
                                 <h4>Price</h4>
                                 <div class="container">
-                                    <input class="btn btn-danger" type="button" onclick="decrementValueProd01()" value="-" />
-                                    <input type="text" name="quantity" value="0" maxlength="10" max="10" size="1" id="number_prod01" />
-                                    <input class="btn btn-danger" type="button" onclick="incrementValueProd01()" value="+" />
+                                    <input class="btn btn-danger" type="button" onclick="decrementValueProd01()"
+                                        value="-" />
+                                    <input type="text" name="quantity" value="0" maxlength="10" max="10" size="1"
+                                        id="number_prod01" />
+                                    <input class="btn btn-danger" type="button" onclick="incrementValueProd01()"
+                                        value="+" />
                                 </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="card">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <img src="https://i.pinimg.com/originals/2a/3c/47/2a3c478f9e8735e9552cc9d7c309e342.jpg" width="100%">
-                        </div>
-                        <div class="col-md-6">
+                    <div class="card">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <img src="https://i.pinimg.com/originals/2a/3c/47/2a3c478f9e8735e9552cc9d7c309e342.jpg"
+                                    width="100%">
+                            </div>
+                            <div class="col-md-6">
                                 <h4>Messi item</h4>
                                 <h4>Price</h4>
                                 <div class="container">
-                                    <input class="btn btn-danger" type="button" onclick="decrementValueProd02()" value="-" />
-                                    <input type="text" name="quantity" value="0" maxlength="10" max="10" size="1" id="number_prod02" />
-                                    <input class="btn btn-danger" type="button" onclick="incrementValueProd02()" value="+" />
+                                    <input class="btn btn-danger" type="button" onclick="decrementValueProd02()"
+                                        value="-" />
+                                    <input type="text" name="quantity" value="0" maxlength="10" max="10" size="1"
+                                        id="number_prod02" />
+                                    <input class="btn btn-danger" type="button" onclick="incrementValueProd02()"
+                                        value="+" />
                                 </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="card">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <img src="https://i.ytimg.com/vi/0-wTd0VjK9A/maxresdefault.jpg" width="100%">
-                        </div>
-                        <div class="col-md-6">
+                    <div class="card">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <img src="https://i.ytimg.com/vi/0-wTd0VjK9A/maxresdefault.jpg" width="100%">
+                            </div>
+                            <div class="col-md-6">
                                 <h4>Messi item</h4>
                                 <h4>Price</h4>
                                 <div class="container">
-                                    <input class="btn btn-danger" type="button" onclick="decrementValueProd03()" value="-" />
-                                    <input type="text" name="quantity" value="0" maxlength="10" max="10" size="1" id="number_prod03" />
-                                    <input class="btn btn-danger" type="button" onclick="incrementValueProd03()" value="+" />
+                                    <input class="btn btn-danger" type="button" onclick="decrementValueProd03()"
+                                        value="-" />
+                                    <input type="text" name="quantity" value="0" maxlength="10" max="10" size="1"
+                                        id="number_prod03" />
+                                    <input class="btn btn-danger" type="button" onclick="incrementValueProd03()"
+                                        value="+" />
                                 </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div style="border: 1px solid grey;" class="container text-center">
+                    <div style="padding: 20px;" class="container">
+                        <div class="row">
+                            <p>Total Price: </p>
+
+                            <b id="total_set">0</b>
+                            <b>LKR</b>
+                        </div>
+
+
+                        <button class="btn btn-warning" id="modal-btn"> Place Order</button>
+                        <div class="modal">
+                            <div class="modal-content text-center">
+                                <span class="close-btn">&times;</span>
+                                <h3>Cart Summary</h3>
+                                <div class="row text-center">
+                                    <p>Name : </p>
+                                    <span id="name_set"></span>
+                                </div>
+                                <div class="row text-center">
+                                    <p>Email : </p>
+                                    <p id="email_set"></p>
+                                </div>
+                                <div class="row text-center">
+                                    <p>Phone : <p>
+                                            <p id="phone_set"></p>
+                                </div>
+
+                                <p id="prod_01"></p>
+
+                                <p id="prod_02"></p>
+
+                                <p id="prod_03"></p>
+
+                                <h3>Total Price: </h3>
+
+                                <b id="modal_total_set">0</b>
+
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        
-        <div class="col-md-4">
-            <div style="border: 1px solid grey;" class="container text-center">
-                <div style="padding: 20px;" class="container">
-                  
-                        <p>Total Price: </p>
-                        <p id="total_set"></p>
-                 
-                    <button class="btn btn-warning" id="modal-btn"> Place Order</button>
-                    <div class="modal">
-                        <div class="modal-content text-center">
-                            <span class="close-btn">&times;</span>  
-                            <h3>Cart Summary</h3>
-                            <div class="row text-center">
-                                <p>Name : </p>
-                                <span id="name_set"></span>
-                            </div>
-                            <div class="row text-center">
-                                <p>Email : </p>
-                                <p id="email_set"></p>
-                            </div>
-                            <div class="row text-center">
-                                <p>Phone : <p>
-                                <p id="phone_set"></p>
-                            </div>
-                            <p>----------------------</p>
-                        </div>
-                        </div>
-                    </div>
-            </div>
         </div>
-    </div>
-</div>
 
-</section>
+    </section>
 
-<script>
-    let modalBtn = document.getElementById("modal-btn")
-    let modal = document.querySelector(".modal")
-    let closeBtn = document.querySelector(".close-btn")
-    modalBtn.onclick = function(){
-    modal.style.display = "block"
-    }
-    closeBtn.onclick = function(){
-    modal.style.display = "none"
-    }
-    window.onclick = function(e){
-    if(e.target == modal){
-        modal.style.display = "none"
-    }
-    }
-    function validateForm(){
-        
-    }
-    document.getElementsByName("name")[0].addEventListener('change', nameSet);
-    document.getElementsByName("email")[0].addEventListener('change', emailSet);
-    document.getElementsByName("phone")[0].addEventListener('change', phoneSet);
-    var totalCartPrice = 0;
-    function nameSet(){
-        document.getElementById("name_set").innerHTML = "";
-        span = document.getElementById("name_set");
-        txt = document.createTextNode(this.value);
-        span.appendChild(txt);
-    }
-    function emailSet(){
-        document.getElementById("email_set").innerHTML = "";
-        span = document.getElementById("email_set");
-        txt = document.createTextNode(this.value);
-        span.appendChild(txt);
-    }
-    function phoneSet(){
-        document.getElementById("phone_set").innerHTML = "";
-        span = document.getElementById("phone_set");
-        txt = document.createTextNode(this.value);
-        span.appendChild(txt);
-    }
+    <script>
+        let modalBtn = document.getElementById("modal-btn");
+        let modal = document.querySelector(".modal");
+        let closeBtn = document.querySelector(".close-btn");
+        var totalCartPrice = 0;
+        var prodQuantity01 = 0;
+        var prodQuantity02 = 0;
+        var prodQuantity03 = 0;
+        var prodPrice01 = 1000;
+        var prodPrice02 = 12000;
+        var prodPrice03 = 10000;
 
-    function calTotPrice(price,quantity){
-        var totalPrice = price * quantity;
-        totalCartPrice = totalCartPrice + totalPrice;
-        document.getElementById("total_set").innerHTML = totalCartPrice;
-    }
+        modalBtn.onclick = function () {
+            var isValid = validateForm();
+            if (isValid) {
+                generateInvoice();
+                modal.style.display = "block"
+                modal.style.overflow = "scroll"
+            }
+        }
 
-    function removeFromCart(price,quantity){
-        var totalPrice = price * quantity;
-        totalCartPrice = totalCartPrice - totalPrice;
-        document.getElementById("total_set").innerHTML = totalCartPrice;
-    }
+        closeBtn.onclick = function () {
+            modal.style.display = "none"
+            window.location.reload(false);
+        }
 
-    function incrementValueProd01()
-    {
-        var value = parseInt(document.getElementById('number_prod01').value, 10);
-        value = isNaN(value) ? 0 : value;
-        if(value<10){
-            value++;
+        window.onclick = function (e) {
+            if (e.target == modal) {
+                modal.style.display = "none"
+            }
+        }
+
+        function validateForm() {
+            if (document.getElementById("form_name").value == "") {
+                alert("Please enter name");
+                return false;
+            } else
+            if (document.getElementById("form_email").value == "" || !document.getElementById("form_email").value
+                .includes('@')) {
+                alert('Please enter a valid email address');
+                return false;
+            } else
+            if (document.getElementById("form_email").value == "") {
+                alert('Please enter you number');
+                return false;
+            } else if (totalCartPrice == 0) {
+                alert('Empty Cart. Please add items');
+                return false;
+            } else {
+                return true;
+            }
+
+        }
+
+        function generateInvoice() {
+            var isValid = validateForm();
+            if (isValid) {
+                document.getElementById("modal_total_set").innerHTML = totalCartPrice + " LKR";
+                if (prodQuantity01 > 0) {
+                    document.getElementById("prod_01").innerHTML =
+                        `<p>----------------------</p><div><p>Product : World Cup Football</p><p>Price : ${prodPrice01*prodQuantity01} LKR</p><p>Quantity : ${prodQuantity01}</p><div><p>----------------------</p>`;
+                }
+                if (prodQuantity02 > 0) {
+                    document.getElementById("prod_02").innerHTML =
+                        `<p>----------------------</p><div><p>Product : Ronaldo CR7 Boots</p><p>Price : ${prodPrice01*prodQuantity02} LKR</p><p>Quantity : ${prodQuantity02}</p><div><p>----------------------</p>`;
+                }
+                if (prodQuantity03 > 0) {
+                    document.getElementById("prod_03").innerHTML =
+                        `<p>----------------------</p><div><p>Product : Nike Boots</p><p>Price : ${prodPrice01*prodQuantity03} LKR</p><p>Quantity : ${prodQuantity03}</p><div><p>----------------------</p>`;
+                }
+            }
+
+        }
+        document.getElementsByName("name")[0].addEventListener('change', nameSet);
+        document.getElementsByName("email")[0].addEventListener('change', emailSet);
+        document.getElementsByName("phone")[0].addEventListener('change', phoneSet);
+
+        function nameSet() {
+            document.getElementById("name_set").innerHTML = "";
+            span = document.getElementById("name_set");
+            txt = document.createTextNode(this.value);
+            span.appendChild(txt);
+        }
+
+        function emailSet() {
+            document.getElementById("email_set").innerHTML = "";
+            span = document.getElementById("email_set");
+            txt = document.createTextNode(this.value);
+            span.appendChild(txt);
+        }
+
+        function phoneSet() {
+            document.getElementById("phone_set").innerHTML = "";
+            span = document.getElementById("phone_set");
+            txt = document.createTextNode(this.value);
+            span.appendChild(txt);
+        }
+
+        function calTotPrice(price, quantity) {
+            var totalPrice = price * quantity;
+            totalCartPrice = totalCartPrice + totalPrice;
+            document.getElementById("total_set").innerHTML = totalCartPrice;
+        }
+
+        function removeFromCart(price, quantity) {
+            var totalPrice = price * quantity;
+            totalCartPrice = totalCartPrice - totalPrice;
+            document.getElementById("total_set").innerHTML = totalCartPrice;
+        }
+
+        function incrementValueProd01() {
+            var value = parseInt(document.getElementById('number_prod01').value, 10);
+            value = isNaN(value) ? 0 : value;
+            if (value < 10) {
+                value++;
+                prodQuantity01++;
                 document.getElementById('number_prod01').value = value;
-                calTotPrice(20, value);
+                calTotPrice(prodPrice01, value);
 
+            }
         }
-    }
 
-    function decrementValueProd01()
-    {
-        var value = parseInt(document.getElementById('number_prod01').value, 10);
-        value = isNaN(value) ? 0 : value;
-        if(value>0){
-            value--;
+        function decrementValueProd01() {
+            var value = parseInt(document.getElementById('number_prod01').value, 10);
+            value = isNaN(value) ? 0 : value;
+            if (value > 0) {
+                value--;
+                prodQuantity01--;
                 document.getElementById('number_prod01').value = value;
-                removeFromCart(20,value+1);
+                removeFromCart(prodPrice01, value + 1);
 
+            }
         }
-    }
 
-    function incrementValueProd02()
-    {
-        var value = parseInt(document.getElementById('number_prod02').value, 10);
-        value = isNaN(value) ? 0 : value;
-        if(value<10){
-            value++;
+        function incrementValueProd02() {
+            var value = parseInt(document.getElementById('number_prod02').value, 10);
+            value = isNaN(value) ? 0 : value;
+            if (value < 10) {
+                value++;
+                prodQuantity02++;
                 document.getElementById('number_prod02').value = value;
-                calTotPrice(20, value);
+                calTotPrice(prodPrice02, value);
 
+            }
         }
-    }
 
-    function decrementValueProd02()
-    {
-        var value = parseInt(document.getElementById('number_prod02').value, 10);
-        value = isNaN(value) ? 0 : value;
-        if(value>0){
-            value--;
+        function decrementValueProd02() {
+            var value = parseInt(document.getElementById('number_prod02').value, 10);
+            value = isNaN(value) ? 0 : value;
+            if (value > 0) {
+                value--;
+                prodQuantity02--;
                 document.getElementById('number_prod02').value = value;
-                removeFromCart(20,value+1);
+                removeFromCart(prodPrice02, value + 1);
+            }
         }
-    }
 
-    function incrementValueProd03()
-    {
-        var value = parseInt(document.getElementById('number_prod03').value, 10);
-        value = isNaN(value) ? 0 : value;
-        if(value<10){
-            value++;
+        function incrementValueProd03() {
+            var value = parseInt(document.getElementById('number_prod03').value, 10);
+            value = isNaN(value) ? 0 : value;
+            if (value < 10) {
+                value++;
+                prodQuantity03++;
                 document.getElementById('number_prod03').value = value;
-                calTotPrice(20, value);
+                calTotPrice(prodPrice03, value);
+            }
         }
-    }
 
-    function decrementValueProd03()
-    {
-        var value = parseInt(document.getElementById('number_prod03').value, 10);
-        value = isNaN(value) ? 0 : value;
-        if(value>0){
-            value--;
+        function decrementValueProd03() {
+            var value = parseInt(document.getElementById('number_prod03').value, 10);
+            value = isNaN(value) ? 0 : value;
+            if (value > 0) {
+                value--;
+                prodQuantity03--;
                 document.getElementById('number_prod03').value = value;
-                removeFromCart(20,value+1);
+                removeFromCart(prodPrice03, value + 1);
+            }
         }
-    }
-
-</script>
+    </script>
 
 </body>
+
 </html>

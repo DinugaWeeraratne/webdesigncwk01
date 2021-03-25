@@ -1,7 +1,7 @@
 // To call Header Element, just use <header-tag></header-tag> in the relevant page body
 
 const template = document.createElement('template');
-template.innerHTML =`
+template.innerHTML = `
 <style>
 .wrapper-container{
     /* background-color: aqua; */
@@ -70,14 +70,16 @@ template.innerHTML =`
     </div>
 `;
 class HeaderElement extends HTMLElement {
-  constructor() {
-    super();
-    this.attachShadow({ mode: "open" });
-    this.shadowRoot.appendChild(template.content.cloneNode(true))
-    // this.shadowRoot.querySelector('h1').innerText = "Headersss"
-    this.shadowRoot.querySelector('h3').innerText = this.getAttribute('name')
-    this.shadowRoot.querySelector('p').innerText = " Lorem ipsum dokdfkdm";
-    this.innerHTML = `${this.getAttribute("name")}`;
-  }
+    constructor() {
+        super();
+        this.attachShadow({
+            mode: "open"
+        });
+        this.shadowRoot.appendChild(template.content.cloneNode(true))
+        // this.shadowRoot.querySelector('h1').innerText = "Headersss"
+        this.shadowRoot.querySelector('h3').innerText = this.getAttribute('name')
+        this.shadowRoot.querySelector('p').innerText = " Lorem ipsum dokdfkdm";
+        this.innerHTML = `${this.getAttribute("name")}`;
+    }
 }
 window.customElements.define("header-tag", HeaderElement);

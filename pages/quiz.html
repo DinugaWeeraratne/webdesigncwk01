@@ -32,9 +32,18 @@
     </div>
 
     <script>
-        var questions = ["1. Which Liverpool star also played for Southampton and Celtic?", "2. Which team has won the most FA Cup trophies?", "3. Where in France was the 2019 Women’s World Cup final played?", "4. Which club did Man. United sign Anthony Martial from?", "5. Which country do Orlando Pirates play in?", "6. At which club did Aaron Ramsey begin his career?", "7. Which Match of the Day pundit did NOT play for Liverpool and Spurs?", "8. What do the initials VAR mean in football?", "9. Which trophy is contested between the Prem and FA Cup winners?", "10. What is the nickname of Bournemouth?"];
-        var choices2 =
-            [["Sadio Mane", "Adam Lallana", "Virgil van Dijk", "3"],
+        var questions = ["1. Which Liverpool star also played for Southampton and Celtic?",
+            "2. Which team has won the most FA Cup trophies?",
+            "3. Where in France was the 2019 Women’s World Cup final played?",
+            "4. Which club did Man. United sign Anthony Martial from?",
+            "5. Which country do Orlando Pirates play in?", "6. At which club did Aaron Ramsey begin his career?",
+            "7. Which Match of the Day pundit did NOT play for Liverpool and Spurs?",
+            "8. What do the initials VAR mean in football?",
+            "9. Which trophy is contested between the Prem and FA Cup winners?",
+            "10. What is the nickname of Bournemouth?"
+        ];
+        var choices2 = [
+            ["Sadio Mane", "Adam Lallana", "Virgil van Dijk", "3"],
             ["Arsenal", "Man United", "Chelsea", "1"],
             ["Stade De Lyon", "Parc Des Princes", "Allianz Riviera", "1"],
             ["Monaco", "Marseille", "Lille", "1"],
@@ -43,7 +52,8 @@
             ["Ian Wright", "Peter Crouch", "Danny Murphy", "3"],
             ["Very Awful Reaction", "Video Assistant Referee", "Video Action Replay", "2"],
             ["Club World Cup", "Community Shield", "EFL Trophy", "2"],
-            ["The Berries", "The Nuts", "The Cherries", "3"]];
+            ["The Berries", "The Nuts", "The Cherries", "3"]
+        ];
 
         var score = 0;
         var questionNumber = 0;
@@ -53,14 +63,24 @@
         window.onload = function () {
             score = 0;
             message001.innerHTML = questions[0];
-            options001.innerHTML = ("<input onclick=setSelectedAnswer(1) name=choices type=radio />" + choices2[0][0] + "<br/>  <input onclick=setSelectedAnswer(2) name=choices type=radio />" + choices2[0][1] + "<br/> <input onclick=setSelectedAnswer(3) name=choices type=radio />" + choices2[0][2] + "<br/> ")
+            options001.innerHTML = ("<input onclick=setSelectedAnswer(1) name=choices type=radio />" + choices2[0][
+                0
+            ] + "<br/>  <input onclick=setSelectedAnswer(2) name=choices type=radio />" + choices2[0][
+                1
+            ] + "<br/> <input onclick=setSelectedAnswer(3) name=choices type=radio />" + choices2[0][
+                2
+            ] + "<br/> ")
             click001.innerHTML = "<button onclick=nextQuestion(0)>Submit</button>";
         }
+
         function nextQuestion(questNumber) {
             addScore(selectAnswer, choices2[questNumber][3])
             questNumber = questNumber + 1;
             message001.innerHTML = questions[questNumber];
-            options001.innerHTML = ("<input onclick=setSelectedAnswer(1) name=choices type=radio />" + choices2[questNumber][0] + "<br/>  <input onclick=setSelectedAnswer(2) name=choices type=radio />" + choices2[questNumber][1] + "<br/> <input onclick=setSelectedAnswer(3) name=choices type=radio />" + choices2[questNumber][2] + "<br/>")
+            options001.innerHTML = ("<input onclick=setSelectedAnswer(1) name=choices type=radio />" + choices2[
+                    questNumber][0] + "<br/>  <input onclick=setSelectedAnswer(2) name=choices type=radio />" +
+                choices2[questNumber][1] + "<br/> <input onclick=setSelectedAnswer(3) name=choices type=radio />" +
+                choices2[questNumber][2] + "<br/>")
             click001.innerHTML = "<button onclick=nextQuestion(0)>Submit</button>";
             if (questions.length == (questNumber + 1)) {
                 click001.innerHTML = "<button onclick=finish(" + questNumber + ")>Finish</button>";
@@ -69,6 +89,7 @@
             }
 
         }
+
         function addScore(choiceNumber, answerNumber) {
             if (choiceNumber == answerNumber) {
                 score = score + 2;
