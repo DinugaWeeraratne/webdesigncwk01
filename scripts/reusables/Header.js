@@ -16,7 +16,7 @@ template.innerHTML =`
     border-radius: 10px;
 }
 .header{
-    background-color: rgb(25, 118, 210);
+    background-color: #ffc107;
     height: 85px;
     text-align: left;
     color: white;
