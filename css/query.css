@@ -27,6 +27,7 @@
 
 .header h2 {
   margin: 0;
+  text-align: center;
 }
 
 .form {
@@ -86,6 +87,10 @@
   width: 100%;
 }
 
+.form.close {
+    visibility: hidden;
+    display: none;
+}
 .form-control.success input {
   border-color: #2ecc71;
 }
@@ -95,6 +100,10 @@
   color: #2ecc71;
 }
 
+form-control.success i.fa-check-circle.close {
+    visibility: hidden;
+    /* color: #2ecc71; */
+}
 .form-control.success small {
   visibility: visible;
   color: #2ecc71;
@@ -179,4 +188,50 @@
 
 #overlay.active {
   opacity: 1;
+}
+.summary-container{
+    visibility: visible;
+    padding: 20px;
+    position: absolute;
+    top: 240px;
+    word-wrap: break-word;
+    overflow: overlay;
+    background-color: white;
+    width: 465px;
+    word-wrap: break-word;
+    word-break: break-all;
+    border-radius: 5px;
+}
+.summary-container button{
+    width: 100%;
+    padding: 4px;
+    font-size: 16px;
+    background: #ffc107;
+    border: solid 1px #ffc107;
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
+.summary-container.close{
+    visibility: hidden;
+    padding: 20px;
+    position: absolute;
+    top: 240px;
+    word-wrap: break-word;
+    overflow: hidden;
+}
+.row-container{
+    display: flex;
+}
+.row-container>div{
+    margin: 3px;
+    font-size: 18px;
+}
+#last-child{
+    padding-bottom: 30px;
+}
+.title{
+
+}
+.close{
+    visibility: hidden;
 }
