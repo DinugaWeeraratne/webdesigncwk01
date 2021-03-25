@@ -1,7 +1,7 @@
 const form = document.getElementById("form");
 const username = document.getElementById("username");
 const email = document.getElementById("email");
-const password = document.getElementById("password");
+const queryDetails = document.getElementById("query-details");
 const openModalButtons = document.querySelectorAll("[data-modal-target]");
 const closeModalButtons = document.querySelectorAll("[data-close-button]");
 const overlay = document.getElementById("overlay");
@@ -17,7 +17,7 @@ if (form !== null) {
 function checkInputs() {
   const userNameValue = username.value.trim();
   const emailValue = email.value.trim();
-  const passwordValue = password.value.trim();
+  const queryDetailValue = queryDetails.value.trim();
 
   if (userNameValue === "") {
     setErrorFor(username, "Username cannot be blank");
@@ -25,14 +25,14 @@ function checkInputs() {
     setSuccessFor(username);
   }
   if (emailValue === "") {
-    setErrorFor(email, "Username cannot be blank");
+    setErrorFor(email, "Email cannot be blank");
   } else {
     setSuccessFor(email);
   }
-  if (passwordValue === "") {
-    setErrorFor(password, "Username cannot be blank");
+  if (queryDetailValue === "") {
+    setErrorFor(queryDetails, "Details cannot be blank");
   } else {
-    setSuccessFor(password);
+    setSuccessFor(queryDetails);
   }
 }
 // sets styles when error occurred while validating
