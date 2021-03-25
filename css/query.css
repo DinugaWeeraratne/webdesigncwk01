@@ -85,13 +85,7 @@
   display: block;
   width: 100%;
 }
-<<<<<<< HEAD
 
-=======
-.form.close {
-    visibility: hidden;
-}
->>>>>>> d759f71da2038a333a43bd525ec62401b301a17a
 .form-control.success input {
   border-color: #2ecc71;
 }
@@ -100,14 +94,7 @@
   visibility: visible;
   color: #2ecc71;
 }
-<<<<<<< HEAD
 
-=======
-form-control.success i.fa-check-circle.close {
-    visibility: hidden;
-    /* color: #2ecc71; */
-  }
->>>>>>> d759f71da2038a333a43bd525ec62401b301a17a
 .form-control.success small {
   visibility: visible;
   color: #2ecc71;
@@ -192,25 +179,4 @@ form-control.success i.fa-check-circle.close {
 
 #overlay.active {
   opacity: 1;
-<<<<<<< HEAD
-=======
-}
-.summary-container{
-    visibility: visible;
-    padding: 20px;
-    position: fixed;
-    top: 180px;
-}
-.summary-container.close{
-    visibility: hidden;
-}
-.row-container{
-    display: flex;
-}
-.row-container>label{
-    margin: 3px;
-}
-.title{
-
->>>>>>> d759f71da2038a333a43bd525ec62401b301a17a
 }

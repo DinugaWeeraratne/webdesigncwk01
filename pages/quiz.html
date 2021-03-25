@@ -7,8 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../css/main.css" />
     <title>Radio Button Quiz</title>
-    <link rel="stylesheet" href="../css/studentDetails.css">
-    <link rel="stylesheet" href="../css/quiz.css">
+    <link rel="stylesheet" href="../css/viduDemoCss.css">
 
 </head>
 
@@ -16,19 +15,17 @@
     <header-tag></header-tag>
     <script src="../scripts/reusables/Header.js"></script>
     <div class="main-wrapper">
+
         <div class="wrapper">
-
-            <div id="quiz-frame">
-
-                <div id="quiz-center">
-
+            <div id="frame001">
+                <div id="center001">
                     <h2>Football Quiz</h2>
-                    <p id="demo">Time left:0:0:0 </p>
                     <hr />
-                    <p id="questionText"></p>
-                    <p id="choicesText"></p>
-                    <p id="commentText"></p>
-                    <p id="clickButton"></p>
+                    <p id="message001"></p>
+                    <p id="options001"></p>
+                    <p id="comment001"></p>
+                    <p id="click001"></p>
+                    <p id="scoreText"></p>
                 </div>
             </div>
         </div>
@@ -65,7 +62,6 @@
 
         window.onload = function () {
             score = 0;
-<<<<<<< HEAD
             message001.innerHTML = questions[0];
             options001.innerHTML = ("<input onclick=setSelectedAnswer(1) name=choices type=radio />" + choices2[0][
                 0
@@ -75,32 +71,21 @@
                 2
             ] + "<br/> ")
             click001.innerHTML = "<button onclick=nextQuestion(0)>Submit</button>";
-=======
-            questionText.innerHTML = questions[0];
-            choicesText.innerHTML = ("<input onclick=setSelectedAnswer(1) name=choices type=radio />" + choices2[0][0] + "<br/>  <input onclick=setSelectedAnswer(2) name=choices type=radio />" + choices2[0][1] + "<br/> <input onclick=setSelectedAnswer(3) name=choices type=radio />" + choices2[0][2] + "<br/> ")
-            clickButton.innerHTML = "<button onclick=nextQuestion(0)>Submit</button>";
->>>>>>> d759f71da2038a333a43bd525ec62401b301a17a
         }
 
         function nextQuestion(questNumber) {
             addScore(selectAnswer, choices2[questNumber][3])
             questNumber = questNumber + 1;
-<<<<<<< HEAD
             message001.innerHTML = questions[questNumber];
             options001.innerHTML = ("<input onclick=setSelectedAnswer(1) name=choices type=radio />" + choices2[
                     questNumber][0] + "<br/>  <input onclick=setSelectedAnswer(2) name=choices type=radio />" +
                 choices2[questNumber][1] + "<br/> <input onclick=setSelectedAnswer(3) name=choices type=radio />" +
                 choices2[questNumber][2] + "<br/>")
             click001.innerHTML = "<button onclick=nextQuestion(0)>Submit</button>";
-=======
-            questionText.innerHTML = questions[questNumber];
-            choicesText.innerHTML = ("<input onclick=setSelectedAnswer(1) name=choices type=radio />" + choices2[questNumber][0] + "<br/>  <input onclick=setSelectedAnswer(2) name=choices type=radio />" + choices2[questNumber][1] + "<br/> <input onclick=setSelectedAnswer(3) name=choices type=radio />" + choices2[questNumber][2] + "<br/>")
-            clickButton.innerHTML = "<button onclick=nextQuestion(0)>Submit</button>";
->>>>>>> d759f71da2038a333a43bd525ec62401b301a17a
             if (questions.length == (questNumber + 1)) {
-                clickButton.innerHTML = "<button onclick=finish(" + questNumber + ")>Finish</button>";
+                click001.innerHTML = "<button onclick=finish(" + questNumber + ")>Finish</button>";
             } else {
-                clickButton.innerHTML = "<button onclick=nextQuestion(" + questNumber + ")>Next</button>";
+                click001.innerHTML = "<button onclick=nextQuestion(" + questNumber + ")>Next</button>";
             }
 
         }
@@ -111,6 +96,7 @@
             } else {
                 score = score - 1;
             }
+            scoreText.innerHTML = score;
 
         }
 
@@ -121,55 +107,16 @@
 
         function finish(questNumber) {
             addScore(selectAnswer, choices2[questNumber][4])
-            questionText.innerHTML = "End of Quiz";
-            choicesText.innerHTML = "";
-            commentText.innerHTML = "Your score is: " + score;
-            clickButton.innerHTML = "<button onclick=repeat001()>Repeat</button>";
-        }
-
-        function finishTimeUp() {
-            questionText.innerHTML = "End of Quiz";
-            choicesText.innerHTML = "";
-            commentText.innerHTML = "Your score is: " + score;
-            clickButton.innerHTML = "<button onclick=repeat001()>Repeat</button>";
+            message001.innerHTML = "End of Quiz";
+            options001.innerHTML = "";
+            comment001.innerHTML = "Your score is: " + score;
+            click001.innerHTML = "<button onclick=repeat001()>Repeat</button>";
         }
 
         function repeat001() {
             location.reload();
         }
-
-
-        // Set the date we're counting down to
-        var countDownDate = new Date().getTime() + 15 * 60 * 1000;
-
-        // Update the count down every 1 second
-        var x = setInterval(function () {
-
-            // Get today's date and time
-            var now = new Date().getTime();
-
-            // Find the distance between now and the count down date
-            var distance = countDownDate - now;
-
-            // Time calculations for hours, minutes and seconds
-            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-            // Display the result in the element with id="demo"
-            if (hours != "-1")
-                document.getElementById("demo").innerHTML = "Time left: " + minutes + ":" + seconds;
-
-
-
-            // If the count down is finished, write some text
-            if (distance < 0) {
-                clearInterval(x);
-                finishTimeUp(0);
-            }
-        }, 1000);
     </script>
-
 </body>
 
 </html>
