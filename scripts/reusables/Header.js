@@ -65,7 +65,7 @@ template.innerHTML =`
 </style>
 <div class="wrapper-container">
       <header class="header">
-        <h1>Amazon.com</h1>
+        <h1>Football.lk</h1>
       </header>
     </div>
 `;
