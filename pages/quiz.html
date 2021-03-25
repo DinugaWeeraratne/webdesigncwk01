@@ -3,33 +3,19 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/main.css" />
     <title>Radio Button Quiz</title>
     <link rel="stylesheet" href="../css/viduDemoCss.css">
+
 </head>
 
 <body>
-    <style>
-        #frame001 {
-            height: 700px;
-            width: 700px;
-            background-color: white;
-            border: 3px solid black;
-            margin: 4px;
-            padding: 4px;
-            border-radius: 10px;
-            vertical-align: middle;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        #center001 {
-            text-align: center;
-            color: black;
-        }
-    </style>
+    <header-tag></header-tag>
+    <script src="../scripts/reusables/Header.js"></script>
     <div class="main-wrapper">
+
         <div class="wrapper">
             <div id="frame001">
                 <div id="center001">
@@ -62,6 +48,7 @@
         var score = 0;
         var questionNumber = 0;
         var selectAnswer = 0;
+
 
         window.onload = function () {
             score = 0;
