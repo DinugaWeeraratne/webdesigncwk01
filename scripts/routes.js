@@ -2,11 +2,11 @@
 
 const routes = [
   {
-    pageName: 'query-page',
+    pageName: 'query-page',  
     url: './query.html',
   },
   {
-    pageName: 'quiz-page',
+    pageName: 'quiz-page',  
     url: './quiz.html'
   },
   {
@@ -18,7 +18,7 @@ const routes = [
     url: './buyProducts.html'
   }
 ];
-getRedirectionUrl = (object) => {.
+getRedirectionUrl = (object) => {
   const [wrapper] = object
   const { url } = wrapper
   return url
