@@ -2,11 +2,11 @@
 
 const routes = [
   {
-    pageName: 'query-page',
+    pageName: 'query-page',  
     url: './query.html',
   },
   {
-    pageName: 'quiz-page',
+    pageName: 'quiz-page',  
     url: './quiz.html'
   },
   {
