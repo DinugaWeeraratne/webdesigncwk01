@@ -18,7 +18,7 @@ const routes = [
     url: './buyProducts.html'
   }
 ];
-getRedirectionUrl = (object) => {.
+getRedirectionUrl = (object) => {
   const [wrapper] = object
   const { url } = wrapper
   return url
