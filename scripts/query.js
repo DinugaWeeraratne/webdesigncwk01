@@ -9,11 +9,12 @@ const formContainer = document.getElementById("form");
 const editButton = document.getElementById("edit")
 const summaryContainer = document.getElementById("summary-container")
 const icon = document.getElementById("success-icon")
+const iconTwo = document.getElementById("success-icon-two")
+const iconThree = document.getElementById("success-icon-three")
 if (form !== null) {
   form.addEventListener("submit", (e) => {
     e.preventDefault();
     checkInputs();
-    loadSummary();
     removeIcons();
   });
 }
@@ -43,6 +44,7 @@ function checkInputs() {
   }
   if (userNameValue !== "" && emailValue !== "" && queryDetailValue !== "") {
     removeForm();
+    loadSummary();
   }
 }
 // sets styles when error occurred while validating
@@ -104,6 +106,7 @@ function loadForm() {
 editButton.addEventListener("click", (e) => {
     loadForm();
     closeSummary()
+    loadIcons();
 })
 function loadSummary(){
     summaryContainer.className = "summary-container"
@@ -112,5 +115,12 @@ function closeSummary(){
     summaryContainer.className = "summary-container close"
 }
 function removeIcons(){
-    icon.className = "fas fa-check-circle close"
+    icon.className = "close"
+    iconTwo.className = "close"
+    iconThree.className = "close"
+}
+function loadIcons(){
+    icon.className = "fas fa-check-circle"
+    iconTwo.className = "fas fa-check-circle"
+    iconThree.className = "fas fa-check-circle"
 }
