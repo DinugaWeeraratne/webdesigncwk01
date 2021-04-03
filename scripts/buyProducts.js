@@ -1,6 +1,6 @@
-let modalBtn = document.getElementById("modal-btn");
-let modal = document.querySelector(".modal");
-let closeBtn = document.querySelector(".close-btn");
+var modalBtn = document.getElementById("modal-btn");
+var modal = document.querySelector(".modal");
+var closeBtn = document.querySelector(".close-btn");
 var totalCartPrice = 0;
 var prodQuantity01 = 0;
 var prodQuantity02 = 0;
@@ -10,6 +10,7 @@ var prodPrice02 = 12000;
 var prodPrice03 = 10000;
 
 modalBtn.onclick = function () {
+    console.log("place order clicked")
     var isValid = validateForm();
     if (isValid) {
         generateInvoice();
